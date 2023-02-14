@@ -9,7 +9,7 @@ import List from './components/List/List';
 import Map from './components/Map/Map';
 
 //importing for rendering data from api=> api folder => index.js
-import { getPlacesData, getFlightsData} from './api';
+import { getPlacesData} from './api';
 
 const App = () => {         
     //useStates
@@ -40,8 +40,8 @@ const App = () => {
     useEffect(() => {
         if(bounds.sw && bounds.ne)
         setIsLoading(true);
-        getFlightsData(coordinates.lat, coordinates.lng )
-        .then((data)=>setFlightsData(data))
+        // getFlightsData(coordinates.lat, coordinates.lng )
+        // .then((data)=>setFlightsData(data))
         getPlacesData(type,bounds.sw, bounds.ne )
         .then((data)=> {
            

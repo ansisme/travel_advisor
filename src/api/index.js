@@ -22,21 +22,21 @@ export const getPlacesData = async(type, sw, ne) => {
 }
 
 
-export const getFlightsData = async(lat, lng) => {
-    try {
-        const { data } = await axios.get('https://nearby-airport.p.rapidapi.com/airport/nearby', {
-            params: {
-                longitude: lng,
-                latitude: lat,
-            },
-            headers: {
-                'X-RapidAPI-Key': process.env.REACT_APP_RAPIDAPI_KEY,
-                'X-RapidAPI-Host': 'nearby-airport.p.rapidapi.com',
-                'Access-Control-Allow-Origin': '*',
-            }
-        });
-        return data;
-    } catch (error) {
-        console.log(error);
-    }
-}
+// export const getFlightsData = async(lat, lng) => {
+//     try {
+//         const { data } = await axios.get('https://nearby-airport.p.rapidapi.com/airport/nearby', {
+//             params: {
+//                 longitude: lng,
+//                 latitude: lat,
+//             },
+//             headers: {
+//                 'X-RapidAPI-Key': process.env.REACT_APP_RAPIDAPI_KEY,
+//                 'X-RapidAPI-Host': 'nearby-airport.p.rapidapi.com',
+//                 'Access-Control-Allow-Origin': '*',
+//             }
+//         });
+//         return data;
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
