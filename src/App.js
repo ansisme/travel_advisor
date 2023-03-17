@@ -21,7 +21,7 @@ const App = () => {
     const [type, setType]= useState('restaurants');
     const [rating, setRating]= useState(0);
     const [filteredPlaces, setFilteredPlaces] = useState([]);
-    const [flightsData, setFlightsData]= useState([]);
+    // const [flightsData, setFlightsData]= useState([]);
    
     //useEffect for fetching data from api
     //show the user's coordinates ony at the starting, so we have depenedency array empty
@@ -77,7 +77,7 @@ const App = () => {
                     coordinates = {coordinates}
                     places = {filteredPlaces.length ? filteredPlaces : places} //to get a card component 
                     setChildClicked = {setChildClicked}
-                    flightsData = {flightsData}
+                    // flightsData = {flightsData}
         />
         </Grid>
      </Grid>
